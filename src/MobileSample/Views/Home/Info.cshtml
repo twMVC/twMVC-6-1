@@ -1,0 +1,19 @@
+﻿@model List<MobileSample.Models.InfoClass>
+@{
+    ViewBag.Title = "Info";
+}
+
+<h2>Info</h2>
+<ul data-role="listview" data-divider-theme="b" data-inset="true">
+    <li data-role="list-divider" role="heading">Divider
+    </li>
+    @foreach (var item in Model)
+    {
+        <li data-theme="c">
+            <h3>@item.name</h3>
+            @item.addr
+        </li>
+    }
+    <li data-role="list-divider" role="heading">Divider
+    </li>
+</ul>

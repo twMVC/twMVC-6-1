@@ -1,0 +1,18 @@
+﻿@model List<MobileSample.Models.AreaClass>
+@{
+    ViewBag.Title = "首頁";
+}
+ <ul data-role="listview" data-divider-theme="b" data-inset="true">
+            <li data-role="list-divider" role="heading">
+                Divider
+            </li>
+     @foreach (var item in Model)
+     {
+          <li data-theme="c">
+                <a href="@Url.Action("Info",new{areaId=item.areaId})" data-transition="slide">
+                    @item.areaName
+                </a>
+            </li>
+     }
+           
+        </ul>

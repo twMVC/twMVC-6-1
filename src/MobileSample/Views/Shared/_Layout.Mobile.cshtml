@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/Mobile/css", "~/Content/jquerymobile/css")
+    @Scripts.Render("~/bundles/jquery", "~/bundles/jquerymobile")
+    <script>
+        $(document).ready(function () {
+            $.mobile.ajaxEnabled = false;
+        });
+    </script>
+</head>
+<body>
+
+    <div data-role="page">
+        <div data-theme="a" data-role="header">
+            <h3>停車資訊
+            </h3>
+        </div>
+        <div data-role="content">
+            @RenderSection("featured", false)
+            @RenderBody()
+        </div>
+        <div data-theme="a" data-role="footer" data-position="fixed">
+            <h3>版權宣告
+            </h3>
+            <a data-role="button" data-transition="pop" data-theme="b" href="#page1"
+                class="ui-btn-left">Back
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
+
